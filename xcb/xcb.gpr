@@ -1,0 +1,11 @@
+library project XCB is
+   for Source_Dirs use (".");
+   for Library_ALI_Dir use "lib";
+   for Library_Name use "xadabinding.so.0";
+   for Library_Kind use "dynamic";
+   for Library_Dir use "lib";
+   for Object_Dir use ".o";
+   package Compiler is
+      for Default_Switches ("Ada") use ("-gnat2012", "-g", "-gnatafoy", "-gnatVa");
+   end Compiler;
+end XCB;

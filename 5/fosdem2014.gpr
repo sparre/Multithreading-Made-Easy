@@ -1,0 +1,14 @@
+with "../xcb/xcb.gpr";
+project fosdem2014 is
+   for Source_Dirs use (".");
+   for Object_Dir use ".o";
+   for Exec_Dir use ".";
+   for Main use ("fosdem2014");
+   package Compiler is
+      for Default_Switches ("Ada") use ("-gnat2012", "-g", "-O0", "-gnatafoy",
+                                        "-gnatVa", "-gnatwa");
+   end Compiler;
+   package Linker is
+      for Default_Switches ("Ada") use ("-lxcb-keysyms");
+   end Linker;
+end fosdem2014;
